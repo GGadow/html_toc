@@ -1,0 +1,43 @@
+div.__toc_level_1 {
+}
+
+div.__toc_level_2 {
+	padding-left:1em;
+}
+
+div.__toc_level_3 {
+	padding-left:2em;
+}
+
+div.__toc_level_4 {
+	padding-left:3em;
+}
+
+div.__toc_level_5 {
+	padding-left:4em;
+}
+
+div.__toc_level_6 {
+	padding-left:5em;
+}
+
+#__toc {
+	display:inline-block;
+	padding:0.5em;
+	border:solid 1px #AAAAAA;
+	background-color:#EEEEEE;
+}
+
+#__toc_content {
+	padding-top:0.75em;
+}
+        
+#__toc_header {
+	font-weight:bold;
+}
+
+#__toc_toggle {
+	cursor:pointer;
+	font-size:0.8em;
+	font-weight:normal;
+}
