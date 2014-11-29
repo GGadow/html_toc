@@ -21,7 +21,10 @@ module HtmlToc
 		d3 = 0
 		d4 = 0
 		d5 = 0
-		d6 = 0		
+		d6 = 0	
+
+    #Make a copy of the source, in case we need to preserve the original string
+		result = source	
 
 		#Loop through the tags range to get the header tags
 		tags_hash = Hash.new
@@ -35,10 +38,10 @@ module HtmlToc
 			test = /<h#{x}(?: .*?)?>(.*?)<\/h#{x}>/
 		
 			#Scan, and use the resulting MatchData objects to populate the hash
-			source.scan(test) do
+			result.scan(test) do
 				m=Regexp.last_match
 				tags_hash[m.begin(0)] = Hx.new(m, depth)
-			end #source.scan(test) do
+			end #result.scan(test) do
 		end #tags.each do
 
 		#Execute this block only if we have indexed headers
@@ -47,18 +50,11 @@ module HtmlToc
 			#of an array with two objects: the integer key and the Hx value
 			tags = tags_hash.sort_by { |k, v| k }
 
-			#Loop through tags to inform the Hx object of its position in the array
-			i=0
-			tags.each do |elem|
-				elem[1].index = i
-				i+=1
-			end
-
 			#Start with the last tag and work towards the front: this way,
 			#the begin index of subsequent headers will not be moved.
 			tags.reverse.each do |elem|
 				#Replace the section in the text with the corresponding d_anchor
-				source[elem[1].start_index..elem[1].end_index]=elem[1].text
+				result[elem[1].start_index..elem[1].end_index]=elem[1].text
 			end #tags.reverse.each do
 
 			#Now move forward through the array and build the toc itself
@@ -116,16 +112,15 @@ module HtmlToc
 		end #if tags_hash.length > 0
 
 		#The location of the toc token may have changed, so get its location
-		toc_md = source.match(token)
-		source[toc_md.begin(0)..toc_md.end(0)] = toc
+		toc_md = result.match(token)
+		result[toc_md.begin(0)..toc_md.end(0)] = toc
 		
-		source
+		result
 	end #self.process
 
 private
 
 	class Hx
-		attr_accessor :index
 		attr_reader :depth, :text, :start_index, :end_index
 
 		@@unique_id = 0
@@ -140,7 +135,7 @@ private
 			tag_id = @text.match(/\bid(\s*?)=(\s*?)(["'])(.*?)\3/)
 			if tag_id == nil 
 				@@unique_id += 1
-				id = " id='id__#{@@unique_id}'"
+				id = " id='_id__#{@@unique_id}'"
 				snip = @text.index('>') #get the location of the first >
 				@text.insert(snip, id)
 			end

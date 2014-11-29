@@ -1,5 +1,6 @@
 task :default => :run_test
 
+
 task :run_test do
 	src = './test/start.html'
 	dest = './test/end.html'

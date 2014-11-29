@@ -47,7 +47,7 @@
     sed fringilla purus adipiscing. Class aptent taciti sociosqu ad litora torquent per conubia 
     nostra, per inceptos himenaeos.</p>
 
-    <h5>And more detail</h5>
+    <h5 id="ID_01">And more detail, with its own ID</h5>
     
     <p>Maecenas sed fringilla elit. Nulla sit amet nulla erat. Suspendisse potenti. Vivamus 
     fringilla consequat risus, at aliquam leo sollicitudin in. Donec vitae augue nisi. Suspendisse 
@@ -59,7 +59,7 @@
     Phasellus et felis nisi. Fusce varius diam nec nisl sagittis ut iaculis nisi molestie. Nam 
     ut velit nibh, tincidunt pellentesque augue.</p>
 
-    <h4>Another minor header</h4>
+    <h4 id="ID_02">Another minor header with an ID/h4>
     
     <p>Quisque venenatis bibendum sapien id ornare. Mauris ultricies condimentum erat quis 
     euismod. Morbi sed lectus libero, at placerat justo. Suspendisse scelerisque fringilla 
@@ -73,7 +73,7 @@
     amet arcu vitae lacus ultricies laoreet. Nunc hendrerit, ante id tempor euismod, felis 
     risus hendrerit ante, rutrum aliquet velit mi non lorem.</p>
 
-    <h4>And yet another</h4>
+    <h4 id="ID_03" rel="test" class="test">And yet another with attributes, ID first</h4>
     
     <p>Praesent imperdiet pharetra dignissim. Donec odio leo, mattis non ornare sit amet, 
     sodales nec neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur 
@@ -85,7 +85,7 @@
     elementum tempus risus, ultrices volutpat augue malesuada ut. Suspendisse ut metus nec 
     augue laoreet accumsan.</p>
 
-    <h3>Second major header</h3>
+    <h3 rel="test" id="ID_04" class="test">Second major header with attributes, ID middle</h3>
     
     <p>Suspendisse lobortis mattis ante ut semper. Nulla nunc lorem, tincidunt at gravida vulputate, 
     fringilla nec dui. Maecenas interdum orci vitae erat dapibus et vehicula metus tristique. 
@@ -99,7 +99,7 @@
     Duis nec risus at arcu imperdiet semper. Nunc tristique nibh at odio semper at elementum felis 
     feugiat.</p>
 
-    <h3>Third major header</h3>
+    <h3 rel="test" class="test" id="ID_05">Third major header with attributes, ID last</h3>
     
     <p>Suspendisse pretium elit id sem hendrerit pretium. In ligula arcu, tincidunt nec faucibus 
     sit amet, venenatis id odio. Integer tellus nunc, pharetra sed euismod non, venenatis a leo. 
