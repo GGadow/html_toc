@@ -15,7 +15,7 @@ The links are constructed so that the inner HTML will be identical to the inner 
 &lt;div id='__toc'&gt;<br/>
 &nbsp;&nbsp;&lt;div id='__toc_header'&gt;Contents[&lt;span id='__toc_toggle' onclick='ShowHideToc();'&gt;Hide&lt;/span&gt;]&lt;/div&gt;<br/>
 &nbsp;&nbsp;&lt;div id='__toc_content' style='display:block'&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='__toc_level_1'&gt;&lt;a href='#id__1'&gt;1 First major header&lt;/a&gt;&lt;/div&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='__toc_level_1'&gt;&lt;a href='#id__1'&gt;1 First (1<sup>st</sup>) major header&lt;/a&gt;&lt;/div&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='__toc_level_2'&gt;&lt;a href='#id__5'&gt;1.1 Minor header 1&lt;/a&gt;&lt;/div&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='__toc_level_3'&gt;&lt;a href='#id__11'&gt;1.1.1 Detail the first&lt;/a&gt;&lt;/div&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='__toc_level_3'&gt;&lt;a href='#already_here_1'&gt;1.1.2 Detail the second&lt;/a&gt;&lt;/div&gt;<br/>
@@ -38,9 +38,13 @@ The optional span after **Contents** can be wired to a piece of Javascript that 
 
 >**source** is a string holding the HTML source.
 
->*h_tags* is an optional Enumerable giving the integer indexes of the header tags that will be used to the table of contents. The method will iterate through *h_tags* using <span style="color:#009900;">#each</span> to build the regular expression <span style="color:#800000;">/&lt;h#{x}(?: .\*?)?&gt;(.\*?)&lt;\/h#{x}&gt;/</span> that will find the desired header tags. If omitted, the range (1..6) is assumed, which will add all headers in the document to the table of contents.
+>*h_tags* is an optional Enumerable giving the integer indexes of the header tags that will be used to the table of contents. The method will iterate through *h_tags* using <span style="color:#009900;">#each</span> to build the regular expression <span style="color:#800000;">/&lt;h#{x}(?: .\*?)?&gt;(.\*?)&lt;\/h#{x}&gt;/</span> that will find the desired header tags. If omitted, the range (3..6) is assumed, which will add all headers in the document to the table of contents.
 
 >*show_label* is an optional boolean. If **true**, the table of contents will include a span coded to call <span style="color:#800000">onclick = 'ShowHideToc();'</span>. This stub can be linked to a Javascript method to toggle the visibility of the table of contents. If omitted, **true** is assumed.
 
 >*use_numbers* is an optional boolean. If **true**, the table of contents entries will have outline index numbers; otherwise, no numbers will be included. If an intervening header is missing &mdash; say, you have an h3 followed by an h5 &mdash; an index of zero will be used to indicate the missing h4.
 
+##Additional files
+
+See **html_toc.css** for an example how to style the table of contents.<br/>
+See **html_toc.js** for the Javascript to toggle visibility of the table of contents.

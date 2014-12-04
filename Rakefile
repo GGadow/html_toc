@@ -6,6 +6,6 @@ task :run_test do
 	require './lib/html_toc.rb'
 	
 	before = File.read(src)
-	after = HtmlToc.process(before, (3..5), true, true)
+	after = HtmlToc.process(before)
 	File.open(dest, "w") {|f| f.write(after)}
 end

@@ -3,7 +3,7 @@ require 'rexml/document'
 module HtmlToc
 
 	#Primary method call
-	def self.process source, h_tags=Range.new(1, 6), show_label=true, use_numbers=true
+	def self.process source, h_tags=Range.new(3, 6), show_label=true, use_numbers=true
 
 		#Search regex for {{toc}}
 		token = /\{\{[tT][oO][cC]\}\}/
@@ -23,7 +23,8 @@ module HtmlToc
 		d5 = 0
 		d6 = 0	
 
-    #Make a copy of the source, in case we need to preserve the original string
+    #Make a copy of the source, in case we need to 
+		#preserve the original string
 		result = source	
 
 		#Loop through the tags range to get the header tags
@@ -37,7 +38,8 @@ module HtmlToc
 			#Regex for indexed header tags
 			test = /<h#{x}(?: .*?)?>(.*?)<\/h#{x}>/
 		
-			#Scan, and use the resulting MatchData objects to populate the hash
+			#Scan, and use the resulting MatchData objects 
+			#to populate the hash
 			result.scan(test) do
 				m=Regexp.last_match
 				tags_hash[m.begin(0)] = Hx.new(m, depth)
