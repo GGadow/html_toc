@@ -1,3 +1,5 @@
+**Travis CI:** ![Latest test](https://travis-ci.org/GGadow/html_toc.svg?branch=master)
+
 #HtmlToc
 
 HtmlToc is a Ruby module that post-processes an HTML document to built a table of contents and insert it at a specified location. 
