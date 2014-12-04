@@ -46,5 +46,5 @@ The optional span after **Contents** can be wired to a piece of Javascript that 
 
 ##Additional files
 
-See **html_toc.css** for an example how to style the table of contents.<br/>
-See **html_toc.js** for the Javascript to toggle visibility of the table of contents.
+See **sample/html_toc.css** for an example how to style the table of contents.<br/>
+See **sample/html_toc.js** for the Javascript to toggle visibility of the table of contents.

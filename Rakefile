@@ -1,5 +1,9 @@
 task :default => :run_test
 
+#Open the src document and load it into before.
+#Feed before through HtmlToc.process and put the result into after
+#Save after 
+
 task :run_test do
 	src = './test/start.html'
 	dest = './test/end.html'
