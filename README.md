@@ -48,6 +48,6 @@ If headers are found, a link is generated for each matching header. The link tex
 
 ##Additional files
 
-See **sample/html_toc.css** for an example how to style the table of contents.<br/>
+See **sample/html_toc.css** for an example of how to style the table of contents.<br/>
 See **sample/html_toc.js** for the Javascript to toggle visibility of the table of contents.
 
