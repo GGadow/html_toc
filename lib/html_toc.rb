@@ -3,10 +3,10 @@ require 'rexml/document'
 module HtmlToc
 
 	#Primary method call
-	def self.process source, h_tags=Range.new(3, 6), show_label=true, use_numbers=true
+	def self.process source, h_tags=Range.new(2, 6), show_toggle=false, use_numbers=false
 
 		#Search regex for {{toc}}
-		token = /\{\{[tT][oO][cC]\}\}/
+		token = /\[\[[tT][oO][cC]\]\]/
 
  		#If there is no token, just return the source
 		if source !~ token then 
@@ -62,7 +62,7 @@ module HtmlToc
 			#Now move forward through the array and build the toc itself
 			toc = "<div id='__toc'>\n"
 			toc += "<div id='__toc_header'>Contents"
-			if show_label then
+			if show_toggle then
 				toc+=" [<span id='__toc_toggle' onclick='ShowHideToc();'>Hide</span>]"
 			end
 			toc+="</div>\n"

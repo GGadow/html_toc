@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="../sample/html_toc.css" />
-    <script type="text/javascript" src="../sample/html_toc.js"></script>		
+    <link rel="stylesheet" type="text/css" href="html_toc.css" />
+    <script type="text/javascript" src="html_toc.js"></script>		
 </head>
 <body>
     <h1>Page header</h1>
@@ -10,10 +10,32 @@
     
     <p>Lorem Ipsum courtesy of <a href="http://www.lipsum.com/">Lorem Ipsum</a>.</p>
     
-    [[TOc]]
+    <table id='__toc'>
+<tr><th id='__toc_header'>Contents [<span id='__toc_toggle' onclick='ShowHideToc();'>Hide</span>]</th></tr>
+<tr id='__toc_content' style='display:block'><td><table>
+<tr><td class='__toc_level_1'><a href='#__toc_0'>1 First major header</a></td></tr>
+<tr><td class='__toc_level_2'><a href='#__toc_1'>1.1 A minor header</a></td></tr>
+<tr><td class='__toc_level_3'><a href='#__toc_2'>1.1.1 Here is some detail</a></td></tr>
+<tr><td class='__toc_level_3'><a href='#__toc_3'>1.1.2 And more detail</a></td></tr>
+<tr><td class='__toc_level_2'><a href='#__toc_4'>1.2 Another minor header</a></td></tr>
+<tr><td class='__toc_level_2'><a href='#__toc_5'>1.3 And yet another</a></td></tr>
+<tr><td class='__toc_level_1'><a href='#__toc_6'>2 Second major header</a></td></tr>
+<tr><td class='__toc_level_1'><a href='#__toc_7'>3 Third major header</a></td></tr>
+<tr><td class='__toc_level_2'><a href='#__toc_8'>3.1 Why not another minor header</a></td></tr>
+<tr><td class='__toc_level_2'><a href='#__toc_9'>3.2 Minor header, same text</a></td></tr>
+<tr><td class='__toc_level_2'><a href='#__toc_10'>3.3 Minor header, same text</a></td></tr>
+<tr><td class='__toc_level_3'><a href='#__toc_11'>3.3.1 Details again</a></td></tr>
+<tr><td class='__toc_level_3'><a href='#__toc_12'>3.3.2 And yet again</a></td></tr>
+<tr><td class='__toc_level_3'><a href='#__toc_13'>3.3.3 Three times is the charm</a></td></tr>
+<tr><td class='__toc_level_2'><a href='#__toc_14'>3.4 Minor header again</a></td></tr>
+<tr><td class='__toc_level_2'><a href='#__toc_15'>3.5 And again</a></td></tr>
+<tr><td class='__toc_level_1'><a href='#__toc_16'>4 Fourth major header</a></td></tr>
+<tr><td class='__toc_level_1'><a href='#__toc_17'>5 Fifth major header</a></td></tr>
+<tr><td class='__toc_level_1'><a href='#__toc_18'>6 Sixth major header</a></td></tr>
+<tr><td class='__toc_level_3'><a href='#__toc_19'>6.0.1 And we end with a detail</a></td></tr>
+</table></td></tr></table>
     
-    <h3>First (1<sup>st</sup>) major header</h3>
-    
+    <a id='__toc_0'></a><h3>First major header</h3>    
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper fringilla 
     justo, non tempus lectus gravida nec. Duis eu lorem tortor. Proin mattis placerat diam, quis 
     placerat libero aliquet nec. Integer id lorem nisi, vitae volutpat arcu. Quisque suscipit 
@@ -26,8 +48,7 @@
     dolor nibh, mollis ac adipiscing nec, commodo eu leo. Morbi suscipit rutrum vehicula. 
     Fusce eget mi ante.</p>
 
-    <h4>A minor header</h4>
-    
+    <a id='__toc_1'></a><h4>A minor header</h4>    
     <p>Integer adipiscing mi sed augue molestie eget ornare metus semper. Nam sed felis turpis. 
     Aenean blandit, nisi ac imperdiet suscipit, nunc augue semper nisl, a laoreet ligula dui ac 
     ante. Phasellus non odio ligula, sed viverra est. Nullam at sollicitudin dui. Suspendisse 
@@ -35,8 +56,7 @@
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel felis diam, sed tincidunt 
     dui. Donec ac leo neque. Fusce feugiat metus ut lacus scelerisque in tempor lectus aliquet.</p>
 
-    <h5>Here is some <em>detail</em></h5>
-    
+    <a id='__toc_2'></a><h5>Here is some detail</h5>    
     <p>Aliquam sit amet justo justo. Nunc accumsan metus ligula. In eget quam lacus, at aliquam 
     tortor. Donec a lacus ac enim condimentum euismod ut at lacus. Integer quis sem id purus 
     ornare rhoncus dictum iaculis eros. Vivamus et mauris eget orci feugiat accumsan feugiat 
@@ -47,8 +67,7 @@
     sed fringilla purus adipiscing. Class aptent taciti sociosqu ad litora torquent per conubia 
     nostra, per inceptos himenaeos.</p>
 
-    <h5 id="already_here_1">And more detail, with its own ID</h5>
-    
+    <a id='__toc_3'></a><h5>And more detail</h5>    
     <p>Maecenas sed fringilla elit. Nulla sit amet nulla erat. Suspendisse potenti. Vivamus 
     fringilla consequat risus, at aliquam leo sollicitudin in. Donec vitae augue nisi. Suspendisse 
     commodo hendrerit venenatis. Nullam pellentesque, ante id semper dictum, massa libero euismod 
@@ -59,8 +78,7 @@
     Phasellus et felis nisi. Fusce varius diam nec nisl sagittis ut iaculis nisi molestie. Nam 
     ut velit nibh, tincidunt pellentesque augue.</p>
 
-    <h4 id="already_here_2">Another minor header with an ID</h4>
-    
+    <a id='__toc_4'></a><h4>Another minor header</h4>    
     <p>Quisque venenatis bibendum sapien id ornare. Mauris ultricies condimentum erat quis 
     euismod. Morbi sed lectus libero, at placerat justo. Suspendisse scelerisque fringilla 
     mollis. Praesent sem turpis, eleifend ultrices vehicula quis, volutpat ut mauris. Vestibulum 
@@ -73,8 +91,7 @@
     amet arcu vitae lacus ultricies laoreet. Nunc hendrerit, ante id tempor euismod, felis 
     risus hendrerit ante, rutrum aliquet velit mi non lorem.</p>
 
-    <h4 id="already_here_3" rel="test" class="test">And yet another with attributes, ID first</h4>
-    
+    <a id='__toc_5'></a><h4>And yet another</h4>    
     <p>Praesent imperdiet pharetra dignissim. Donec odio leo, mattis non ornare sit amet, 
     sodales nec neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur 
     ridiculus mus. Ut nisi turpis, vulputate in mattis sit amet, imperdiet ut ante. Sed ac 
@@ -85,8 +102,7 @@
     elementum tempus risus, ultrices volutpat augue malesuada ut. Suspendisse ut metus nec 
     augue laoreet accumsan.</p>
 
-    <h3 rel="test" id="already_here_4" class="test">Second major header with attributes, ID middle</h3>
-    
+    <a id='__toc_6'></a><h3>Second major header</h3>    
     <p>Suspendisse lobortis mattis ante ut semper. Nulla nunc lorem, tincidunt at gravida vulputate, 
     fringilla nec dui. Maecenas interdum orci vitae erat dapibus et vehicula metus tristique. 
     Maecenas accumsan consequat augue, eget dictum justo ultrices ut. Proin est ante, elementum 
@@ -99,8 +115,7 @@
     Duis nec risus at arcu imperdiet semper. Nunc tristique nibh at odio semper at elementum felis 
     feugiat.</p>
 
-    <h3 rel="test" class="test" id="already_here_5">Third major header with attributes, ID last</h3>
-    
+    <a id='__toc_7'></a><h3>Third major header</h3>    
     <p>Suspendisse pretium elit id sem hendrerit pretium. In ligula arcu, tincidunt nec faucibus 
     sit amet, venenatis id odio. Integer tellus nunc, pharetra sed euismod non, venenatis a leo. 
     Etiam faucibus pulvinar elit sit amet eleifend. Phasellus enim massa, laoreet et lobortis 
@@ -112,8 +127,7 @@
     lobortis id. Donec viverra feugiat lacus, et bibendum elit fringilla scelerisque. Suspendisse 
     quis elit massa, id semper lectus.</p>
 
-    <h4 rel="test" class="test">And a minor header with attributes but not an ID</h4>
-    <p>Praesent quis facilisis nibh. Morbi pretium augue nec arcu egestas fringilla. Maecenas 
+    <a id='__toc_8'></a><h4>Why not another minor header</h4>    <p>Praesent quis facilisis nibh. Morbi pretium augue nec arcu egestas fringilla. Maecenas 
     sit amet diam libero, ut sodales ipsum. Integer pulvinar posuere ipsum, ac auctor turpis 
     aliquam eget. Proin auctor mauris at diam consequat et scelerisque erat scelerisque. Cras 
     enim leo, vestibulum at dignissim eu, mollis ac magna. Nulla facilisi. Maecenas in lacus 
@@ -123,8 +137,7 @@
     venenatis et ipsum. Aliquam dapibus, diam sed bibendum interdum, erat nibh eleifend ipsum, 
     et laoreet leo elit et leo.</p>
 
-    <h4>Minor header <span style="text-decoration:underline;">with style</span></h4>
-    
+    <a id='__toc_9'></a><h4>Minor header, same text</h4>    
     <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
     Mauris massa metus, consequat sed viverra a, scelerisque at nisl. Sed eu neque ut odio 
     euismod accumsan at in turpis. Donec euismod metus ornare diam ornare vitae laoreet purus 
@@ -138,8 +151,7 @@
     ut quis metus. Ut iaculis aliquam tortor eu fermentum. Maecenas vel feugiat odio. Vivamus 
     auctor tristique nunc, eget pretium arcu vulputate nec.</p>
 
-    <h4>Minor header, same text</h4>
-
+    <a id='__toc_10'></a><h4>Minor header, same text</h4>
     <p>Maecenas in dolor eros, vitae vestibulum elit. Praesent porttitor, nunc non commodo 
     luctus, ligula massa euismod leo, ac euismod ipsum metus ac nunc. Mauris felis sem, 
     ullamcorper eget suscipit id, mattis facilisis quam. Proin convallis tortor vitae lectus 
@@ -154,8 +166,7 @@
     lobortis nisl. Donec lacus nunc, convallis at laoreet non, cursus at erat. Sed consequat 
     ultricies fringilla. Aliquam fringilla blandit lobortis.</p>
     
-    <h5>Details again</h5>
-    
+    <a id='__toc_11'></a><h5>Details again</h5>    
     <p>Sed sed dolor sed turpis posuere molestie id at urna. Sed sem nulla, porttitor quis 
     aliquam sit amet, feugiat et mauris. Nunc at lorem in tellus venenatis luctus. Proin 
     scelerisque mi non leo elementum pharetra. Class aptent taciti sociosqu ad litora torquent 
@@ -168,8 +179,7 @@
     sed aliquet vel, facilisis vitae dui. Donec sit amet est odio, non aliquam nunc. Curabitur 
     euismod auctor molestie. Nullam ut enim orci.</p>
 
-    <h5>And yet again</h5>
-    
+    <a id='__toc_12'></a><h5>And yet again</h5>    
     <p>Etiam sagittis, purus vitae placerat molestie, nibh odio semper elit, sed tempus purus 
     leo vel sapien. Curabitur ut porta quam. Pellentesque faucibus euismod metus, vitae tincidunt 
     lectus luctus nec. Aenean sed massa sit amet nunc posuere consequat a a turpis. Sed id risus 
@@ -178,8 +188,7 @@
     elit nunc ornare nisl, ut feugiat dolor orci in dolor. Nullam cursus massa feugiat leo 
     fermentum pellentesque. Quisque suscipit ultricies sollicitudin.</p>
 
-    <h5>Three times is the charm</h5>
-    
+    <a id='__toc_13'></a><h5>Three times is the charm</h5>    
     <p>Suspendisse volutpat semper sem, pharetra commodo metus posuere in. Aliquam erat volutpat. 
     Nullam nibh augue, euismod nec hendrerit sit amet, sodales vel ante. Etiam at velit sit amet 
     dui blandit feugiat. Ut commodo, ante quis vulputate tincidunt, ante mauris sodales leo, cursus 
@@ -188,8 +197,7 @@
     nec egestas eget, varius non purus. Aliquam scelerisque consequat tellus eget auctor. Proin 
     scelerisque orci id nulla blandit rhoncus. Etiam in facilisis metus.</p>
 
-    <h4>Minor header again</h4>
-    
+    <a id='__toc_14'></a><h4>Minor header again</h4>    
     <p>Curabitur hendrerit congue lacus eget elementum. Nam nisl diam, commodo vel eleifend 
     vitae, fermentum id dui. Mauris scelerisque lacinia lacus a imperdiet. Sed convallis 
     convallis eros, vitae blandit quam cursus in. Aenean commodo mi ac lorem ultricies nec 
@@ -198,8 +206,7 @@
     convallis lacinia odio libero non est. Suspendisse vel posuere ligula. Integer odio libero, 
     bibendum ac cursus quis, malesuada vel dui. Vestibulum hendrerit luctus turpis quis venenatis.</p>
 
-    <h4>And again</h4>
-    
+    <a id='__toc_15'></a><h4>And again</h4>    
     <p>Phasellus quis magna dui. Cras sodales orci at magna sagittis molestie. Pellentesque 
     vitae turpis felis. Aliquam dapibus leo at ante malesuada ac venenatis est viverra. Donec 
     eu felis sem. Sed sit amet libero dolor. Maecenas elit justo, condimentum sit amet mattis 
@@ -209,8 +216,7 @@
     risus. Mauris quis elit erat. Donec vestibulum, urna at rutrum consequat, lorem ipsum sagittis 
     orci, eget consequat ligula libero ac leo.</p>
 
-    <h3>Fourth major header</h3>
-    
+    <a id='__toc_16'></a><h3>Fourth major header</h3>    
     <p>Vestibulum luctus sollicitudin tellus vel viverra. Class aptent taciti sociosqu ad litora 
     torquent per conubia nostra, per inceptos himenaeos. Nullam nunc est, lobortis nec porta sed, 
     malesuada sit amet libero. Nulla eu metus tortor, vitae sodales turpis. Integer molestie 
@@ -223,8 +229,7 @@
     congue ornare. Praesent eu libero id velit mattis dictum ac quis turpis. In quis ligula eget 
     felis porta aliquet vitae eu lectus.</p>
 
-    <h3>Fifth major header</h3>
-    
+    <a id='__toc_17'></a><h3>Fifth major header</h3>    
     <p>Nulla faucibus tellus nec justo blandit nec commodo dui imperdiet. Duis fermentum adipiscing 
     neque, eget sagittis lectus hendrerit non. Sed vitae risus id velit laoreet pulvinar quis id ante. 
     Nunc auctor turpis vel odio gravida id feugiat mauris convallis. Etiam eget augue vitae lacus 
@@ -238,8 +243,7 @@
     viverra feugiat, est justo interdum nibh, quis consectetur leo ligula id risus. Vivamus viverra 
     suscipit ipsum, in euismod urna ultricies vel.</p>
 
-    <h3>Sixth major header</h3>
-    
+    <a id='__toc_18'></a><h3>Sixth major header</h3>    
     <p>Vivamus tempor, risus congue sollicitudin tempor, mi velit fringilla erat, sed suscipit diam 
     lectus id purus. Aliquam orci nunc, placerat et pretium a, cursus eget mi. Aliquam semper mattis 
     faucibus. Sed quis vulputate eros. In hac habitasse platea dictumst. Vestibulum convallis, mi a 
@@ -248,8 +252,7 @@
     non, condimentum ac enim. Mauris facilisis imperdiet tellus quis ultrices. Aenean odio mauris, 
     ultricies nec pellentesque non, consequat nec mi.</p>
 
-    <h5>And we end with a detail</h5>
-    
+    <a id='__toc_19'></a><h5>And we end with a detail</h5>    
     <p>Integer cursus aliquet pulvinar. Ut ultricies volutpat nunc ut venenatis. Suspendisse lorem 
     odio, congue vitae gravida ut, fermentum vel nisi. Suspendisse ac erat dui. Vivamus at sapien 
     id ante ultricies semper. Duis dolor dolor, vulputate in viverra in, malesuada eget felis. Fusce 
