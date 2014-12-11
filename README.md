@@ -44,7 +44,7 @@ If headers are found, a link is generated for each matching header. The link tex
 
 >*show_toggle* is an optional boolean. If **true**, the table of contents will include a span coded to call <span style="color:#800000">onclick = 'ShowHideToc();'</span>. This stub can be linked to a Javascript method to toggle the visibility of the table of contents. If omitted, **false** is assumed.
 
->*use_numbers* is an optional boolean. If **true**, the table of contents entries will have outline index numbers; otherwise, no numbers will be included. If an intervening header is missing &mdash; say, you have an h3 followed by an h5 &mdash; an index of zero will be used to indicate the missing h4. If omitted, **false* is assumed.
+>*use_numbers* is an optional boolean. If **true**, the table of contents entries will have outline index numbers; otherwise, no numbers will be included. If an intervening header is missing &mdash; say, you have an h3 followed by an h5 &mdash; an index of zero will be used to indicate the missing h4. If omitted, **false** is assumed.
 
 ##CSS
 
