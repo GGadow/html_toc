@@ -40,11 +40,26 @@ If headers are found, a link is generated for each matching header. The link tex
 
 >**source** is a string holding the HTML source.
 
->*h_tags* is an optional Enumerable giving the integer indexes of the header tags that will be used to the table of contents. The method will iterate through *h_tags* using <span style="color:#009900;">#each</span> to build the regular expression <span style="color:#800000;">/&lt;h#{x}(?: .\*?)?&gt;(.\*?)&lt;\/h#{x}&gt;/</span> that will find the desired header tags. If omitted, the range (2..6) is assumed.
+>*h_tags* is an optional range of integers giving the indexes of the header tags that will be used to the table of contents. The method iterates through *h_tags* to build the regular expression <span style="color:#800000;">/&lt;h#{x}(?: .\*?)?&gt;(.\*?)&lt;\/h#{x}&gt;/</span>. If omitted, the range (2..6) is assumed.
 
->*show_label* is an optional boolean. If **true**, the table of contents will include a span coded to call <span style="color:#800000">onclick = 'ShowHideToc();'</span>. This stub can be linked to a Javascript method to toggle the visibility of the table of contents. If omitted, **false** is assumed.
+>*show_toggle* is an optional boolean. If **true**, the table of contents will include a span coded to call <span style="color:#800000">onclick = 'ShowHideToc();'</span>. This stub can be linked to a Javascript method to toggle the visibility of the table of contents. If omitted, **false** is assumed.
 
 >*use_numbers* is an optional boolean. If **true**, the table of contents entries will have outline index numbers; otherwise, no numbers will be included. If an intervening header is missing &mdash; say, you have an h3 followed by an h5 &mdash; an index of zero will be used to indicate the missing h4. If omitted, **false* is assumed.
+
+##CSS
+
+These classes and ids are used by <span style="color:#009900;">HtmlToc</span> in the table of contents.
+
+>**#__toc** - The outer frame div.
+
+>**#__toc_header** - The header div.
+
+>**#__toc_content** - The contents div.
+
+>**#__toc_toggle** - The span containing the toggle.
+
+>**.__toc_level_x** - Used on the divs holding the links, with x ranging from 1 to 6. These are applied as the header tags are found, so using the default *h_tags*, __toc_level_1 will be associated with h2 tags, __toc_level_2 with h3 tags, and so on.
+
 
 ##Additional files
 
