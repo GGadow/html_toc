@@ -36,7 +36,7 @@ If headers are found, a link is generated for each matching header. The link tex
 
 ##Use
 
-**<span style="color:#009900;">HtmlToc.process</span> &nbsp;&nbsp; source** &nbsp;&nbsp; *h_tags* &nbsp;&nbsp; *show_label* &nbsp;&nbsp; *use_numbers*
+**<span style="color:#009900;">HtmlToc.process</span> &nbsp;&nbsp; source** &nbsp;&nbsp; *h_tags* &nbsp;&nbsp; *show_toggle* &nbsp;&nbsp; *use_numbers*
 
 >**source** is a string holding the HTML source.
 
