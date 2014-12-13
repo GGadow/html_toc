@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.homepage  = 'https://github.com/GGadow/html_toc'
 	s.files			= ["lib/html_toc.rb"]
   s.licenses  = ['MIT']
-  s.required_ruby_version = '>= 2.0'
+  s.required_ruby_version = '>= 2.1'
   s.extra_rdoc_files = ['README.md', 'sample/html_toc.css', 'sample/html_toc.js']
   s.description = <<-EOF
 This gem is intended to be used in Rails pre-processing, after the page has been generated but before it is delivered to the requestor. 
