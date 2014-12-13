@@ -3,7 +3,7 @@ require 'rexml/document'
 module HtmlToc
 
 	#Primary method call
-	def self.process source, h_tags=Range.new(2, 6), show_toggle=false, use_numbers=false
+	def self.process(source:, h_tags: Range.new(2, 6), show_toggle: false, use_numbers: false)
 
 		#Search regex for {{toc}}
 		token = /\[\[[tT][oO][cC]\]\]/

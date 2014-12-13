@@ -36,15 +36,15 @@ If headers are found, a link is generated for each matching header. The link tex
 
 ##Use
 
-**<span style="color:#009900;">HtmlToc.process</span> &nbsp;&nbsp; source** &nbsp;&nbsp; *h_tags* &nbsp;&nbsp; *show_toggle* &nbsp;&nbsp; *use_numbers*
+**<span style="color:#009900;">HtmlToc.process</span> source:, h_tags: Range.new(2, 6), show_toggle: false, use_numbers: false**
 
 >**source** is a string holding the HTML source.
 
->*h_tags* is an optional range of integers giving the indexes of the header tags that will be used to the table of contents. The method iterates through *h_tags* to build the regular expression <span style="color:#800000;">/&lt;h#{x}(?: .\*?)?&gt;(.\*?)&lt;\/h#{x}&gt;/</span>. If omitted, the range (2..6) is assumed.
+>**h_tags** is a range of integers giving the indexes of the header tags that will be used to the table of contents. The method iterates through it to build the regular expression <span style="color:#800000;">/&lt;h#{x}(?: .\*?)?&gt;(.\*?)&lt;\/h#{x}&gt;/</span>. 
 
->*show_toggle* is an optional boolean. If **true**, the table of contents will include a span coded to call <span style="color:#800000">onclick = 'ShowHideToc();'</span>. This stub can be linked to a Javascript method to toggle the visibility of the table of contents. If omitted, **false** is assumed.
+>**show_toggle** flags whether or not to include a toggle button in the table of contents header. The span is programmed to call a Javascript method, ShowHideToc(). The implementing script is *not* included: it must be supplied by the programmer.
 
->*use_numbers* is an optional boolean. If **true**, the table of contents entries will have outline index numbers; otherwise, no numbers will be included. If an intervening header is missing &mdash; say, you have an h3 followed by an h5 &mdash; an index of zero will be used to indicate the missing h4. If omitted, **false** is assumed.
+>**use_numbers** flags whether or not the links will have outlining numbers. 
 
 ##CSS
 
@@ -65,4 +65,9 @@ These classes and ids are used by <span style="color:#009900;">HtmlToc</span> in
 
 See **sample/html_toc.css** for an example of how to style the table of contents.<br/>
 See **sample/html_toc.js** for the Javascript to toggle visibility of the table of contents.
+
+##Change log
+
+**1.1** - Added keyword arguments.
+**1.0** - Initial deployment.
 
