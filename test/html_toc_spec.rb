@@ -170,4 +170,32 @@ describe HtmlToc do
     end
   end
 
+  context "The source has a token and the token and H tags are upper case" do
+    after = HtmlToc.process(source: File.read("Upper.html"), h_tags: (1..6))
+ 
+    it "should generate a TOC entry for H1" do
+      expect(after).to include("<a href='#this_is_one'>Header One</a>")
+    end
+
+    it "should generate a TOC entry for H2" do
+      expect(after).to include("<a href='#this_is_two'>Header Two</a>")
+    end
+
+    it "should generate a TOC entry for H3" do
+      expect(after).to include("<a href='#this_is_three'>Header Three</a>")
+    end
+
+    it "should generate a TOC entry for H4" do
+      expect(after).to include("<a href='#this_is_four'>Header Four</a>")
+    end
+
+    it "should generate a TOC entry for H5" do
+      expect(after).to include("<a href='#this_is_five'>Header Five</a>")
+    end
+
+    it "should generate a TOC entry for H6" do
+      expect(after).to include("<a href='#this_is_six'>Header Six</a>")
+    end
+  end
+
 end

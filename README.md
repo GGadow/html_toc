@@ -8,11 +8,11 @@ HtmlToc is a Ruby module that post-processes an HTML document to built a table o
 
 The gem consists of a single module, <span style="color:#009900;">HtmlToc</span>, which exposes a single public method, <span style="color:#009900;">process</span>. 
 
-<span style="color:#009900;">#process</span> starts by performing a case-insensitive search for a token, **\[\[toc\]\]**. If no token is found, the unmodified source text is return. 
+<span style="color:#009900;">#process</span> starts by performing a case-insensitive search for a pseudo-tag, **&lt;toc /&gt;**. If it is found, the unmodified source text is return. 
 
-If the token is found, <span style="color:#009900;">#process</span> scans for header tags falling within a provided range; if the header does not already have an id attribute, one is added. If no matching headers are found, the token is removed and the modified source text is returned.
+If the tag is found, <span style="color:#009900;">#process</span> scans for header tags falling within a provided range. If a matching header does not already have an id attribute, one is added. If no matching headers are found, the **&lt;toc /&gt;** pseudo-tag is removed and the modified source text is returned.
 
-If headers are found, a link is generated for each matching header. The link text is taken from the header text, and the link's href points to the header's id. Each link wrapped in a div tag; the div is given a class name that matches is level relative to the search range. The link divs are wrapped in a few more divs with unique ids to create the table of contents. Lastly, the table of contents replaces the token and the modified source is returned. The classes and id allow the page to be styled in accordance with the website's design context. The resulting table of contents might look like this:
+If headers are found, a link is generated for each matching header. The link text is taken from the header text, and the link's href points to the header's id. Each link wrapped in a div tag; the div is given a class name that matches is level relative to the search range. The link divs are wrapped in a few more divs with unique ids to create the table of contents. Lastly, the table of contents replaces the **&lt;toc /&gt;** pseudo-tag and the modified source is returned. The classes and id allow the page to be styled to match the website's design context. The resulting table of contents might look like this:
 
 <div style="border:solid 1px #000000;margin-left:1em;">
 
@@ -40,7 +40,7 @@ If headers are found, a link is generated for each matching header. The link tex
 
 >**source** is a string holding the HTML source.
 
->**h_tags** is a range of integers giving the indexes of the header tags that will be used to the table of contents. The method iterates through it to build the regular expression <span style="color:#800000;">/&lt;h#{x}(?: .\*?)?&gt;(.\*?)&lt;\/h#{x}&gt;/</span>. 
+>**h_tags** is a range of integers giving the indexes of the header tags that will be used to the table of contents. The method iterates through it to build the regular expression <span style="color:#800000;">/&lt;h#{x}(?: .\*?)?&gt;(.\*?)&lt;\/h#{x}&gt;/i</span>. 
 
 >**show_toggle** flags whether or not to include a toggle button in the table of contents header. The span is programmed to call a Javascript method, ShowHideToc(). The implementing script is *not* included: it must be supplied by the programmer.
 
@@ -68,6 +68,7 @@ See **sample/html_toc.js** for the Javascript to toggle visibility of the table 
 
 ##Change log
 
+**1.2** - Fixed some issues where matches were not case insensitive, and change the table of contents indicator from a keyword token to a pseudo-tag.
 **1.1** - Added keyword arguments.
 **1.0** - Initial deployment.
 

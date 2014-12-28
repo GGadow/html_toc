@@ -6,7 +6,7 @@ module HtmlToc
 	def self.process(source:, h_tags: Range.new(2, 6), show_toggle: false, use_numbers: false)
 
 		#Search regex for {{toc}}
-		token = /\[\[[tT][oO][cC]\]\]/
+    token = /<toc\s*\/>|\[\[toc\]\]/i #Allow for a token of either <toc/> or [[toc]]
 
  		#If there is no token, just return the source
 		if source !~ token then 
@@ -36,7 +36,7 @@ module HtmlToc
 			depth += 1
 
 			#Regex for indexed header tags
-			test = /<h#{x}(?: .*?)?>(.*?)<\/h#{x}>/
+			test = /<h#{x}(?: .*?)?>(.*?)<\/h#{x}>/i
 		
 			#Scan, and use the resulting MatchData objects 
 			#to populate the hash
@@ -134,7 +134,7 @@ private
 			@end_index = md.end(0)
 
 			#If the tag does not have an ID, give it one
-			tag_id = @text.match(/\bid(\s*?)=(\s*?)(["'])(.*?)\3/)
+			tag_id = @text.match(/\bid(\s*?)=(\s*?)(["'])(.*?)\3/i)
 			if tag_id == nil 
 				@@unique_id += 1
 				id = " id='_id__#{@@unique_id}'"
@@ -145,7 +145,7 @@ private
 
 		def id
 			#TODO Allow for undelimited attribute values, as in HTML5
-			tag_id = @text.match(/\bid(\s*?)=(\s*?)(["'])(.*?)\3/)
+			tag_id = @text.match(/\bid(\s*?)=(\s*?)(["'])(.*?)\3/i)
 
 			if tag_id == nil 
 				""
